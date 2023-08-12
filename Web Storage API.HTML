@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickCounter(){
+	if(typeof(Storage)!=="undefined"){
+		if(sessionStorage.clickCount){
+			sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+		}
+		else{
+			sessionStorage.clickcount=1;
+		}
+	document.getElementById("result").innerHTML="you have clickedthe buttton"+sessionStorage.clickcount"+times in the session";
+	}
+	else{
+		document.getElementById("result").innerHTML="sorry!, your browser does not suppport web storage";
+	
+	}
+}
+</script></head><body>
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+</body></html>
+		
+
+
+
+
